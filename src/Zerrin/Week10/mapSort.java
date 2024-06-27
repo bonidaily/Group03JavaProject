@@ -12,11 +12,9 @@ public class mapSort {
         unsortedMap.put("Lion", 4);
 
         System.out.println("Unsorted Map: " + unsortedMap);
-
-        // Map girdilerini bir List'e dönüştür
+        
         List<Map.Entry<String, Integer>> list = new ArrayList<>(unsortedMap.entrySet());
 
-        // Listeyi değerlerine göre sırala (Bubble Sort kullanarak)
         int n = list.size();
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
@@ -28,7 +26,6 @@ public class mapSort {
                 }
             }
         }
-        // Sıralı girdileri yeni bir LinkedHashMap'e koy
         Map<String, Integer> sortedMap = new LinkedHashMap<>();
         for (Map.Entry<String, Integer> entry : list) {
             sortedMap.put(entry.getKey(), entry.getValue());
